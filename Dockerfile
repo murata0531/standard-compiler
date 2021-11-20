@@ -1,4 +1,8 @@
-FROM openjdk:11-slim
+FROM openjdk:11
 
+RUN mkdir /app
+WORKDIR /app
 RUN apt-get update
-WORKDIR /usr/src
+RUN apt-get install ant
+RUN apt-get install make
+RUN apt-get install default-jre 
